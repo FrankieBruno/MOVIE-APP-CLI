@@ -3,7 +3,7 @@ import React from 'react';
 
 const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
     return (
-<div className="movie" key={imdbID}>
+<a href={`https://www.imdb.com/title/${imdbID}`} className="movie" key={imdbID}> 
     <div>
     <p>{Year}</p>
     </div>
@@ -16,7 +16,7 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
     <span>{Type}</span>
     <h3>{Title}</h3>
     </div>
-</div>
+</a>
     );
 }
 
